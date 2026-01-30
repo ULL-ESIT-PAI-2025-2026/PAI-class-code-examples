@@ -6,6 +6,7 @@
   *
   * @author F. de Sande
   * @since 04.feb.2020
+  *        updated Jan 30 2026
   * @desc Double negation. Converting types
   *
   * @see {@link https://stackoverflow.com/questions/10467475/double-negation-in-javascript-what-is-the-purpose}
@@ -24,11 +25,15 @@
 
 'use strict';
 
-console.log('double negation: ');
-console.log(!!5);
+function convertingTypes() {
+  console.log('double negation: ');
+  console.log(!!5);
 
-// Converting Types
-// Some operators that we could use to convert a value into:
-console.log(!!5);
-console.log(5 + '');
-console.log(+"5");
+  // Converting Types
+  // Some operators that we could use to convert a value into:
+  console.log(!!5);
+  console.log(5 + '');
+  console.log(+'5');
+}
+
+convertingTypes();

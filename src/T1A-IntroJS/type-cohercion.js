@@ -6,26 +6,29 @@
   *
   * @author F. de Sande
   * @since 04.feb.2020
+  *        updated Jan 30 2026
   * @desc Type coercion
-  *
   */
 
 'use strict';
 
-console.log(5 + 5);
-console.log("5" + 5);
-console.log("five" + 5);
-console.log(5 == "5");
-console.log(5 === "5");
-console.log(5 * undefined);
-console.log(5 * null);
+function typeCohercion() {
+  console.log(5 + 5);
+  console.log("5" + 5);
+  console.log("five" + 5);
+  console.log(5 == "5");
+  console.log(5 === "5");
+  console.log(5 * undefined);
+  console.log(5 * null);
 
+  console.log('' === '0');          // →  false
+  console.log('' === 0);            // →  false
+  console.log(0 === '0');           // →  false
+  console.log(NaN === NaN);         // →  still weirdly false  
+  console.log([''] === '');         // →  false
+  console.log(false === undefined); // →  false
+  console.log(false === null);      // →  false
+  console.log(null === undefined);  // →  false
+}
 
-console.log('' === '0');          // →  false
-console.log('' === 0);            // →  false
-console.log(0 === '0');           // →  false
-console.log(NaN === NaN);         // →  still weirdly false  
-console.log([''] === '');         // →  false
-console.log(false === undefined); // →  false
-console.log(false === null);      // →  false
-console.log(null === undefined);  // →  false
+typeCohercion();

@@ -6,16 +6,20 @@
   *
   * @author F. de Sande
   * @since 16.ene.2020
+  *        updated Jan 30 2026
   * @desc While loop
-  *
   */
 
 'use strict';
 
-let result = 1;
-let counter = 0;
-while (counter < 10) {
-  result = result * 2;
-  counter = counter + 1;
+function whileStatement() {
+  let result = 1;
+  let counter = 0;
+  while (counter < 10) {
+    result *= 2;
+    counter = ++counter;
+  }
+  console.log(result);
 }
-console.log(result);
+
+whileStatement();

@@ -12,7 +12,11 @@
 
 'use strict';
 
-let snack = 'coo';
-snack += 'kies';
-snack = snack.toUpperCase();
-console.log("I want " + snack);
+function strings() {
+  let snack = 'coo';
+  snack += 'kies';
+  snack = snack.toUpperCase();
+  console.log("I want " + snack);
+}
+
+strings();

@@ -13,9 +13,13 @@
 
 'use strict';
 
-let ಠ_ಠ = "disapproval";
-console.log(ಠ_ಠ);     // totally works (O_o !?)
+function variables() {
+  let ಠ_ಠ = "disapproval";
+  console.log(ಠ_ಠ);     // totally works (O_o !?)
 
-let x = 25;
-x = "foo";
-console.log(x);
+  let myVar = 25;
+  myVar = 'foo';
+  console.log(myVar);
+}
+
+variables();

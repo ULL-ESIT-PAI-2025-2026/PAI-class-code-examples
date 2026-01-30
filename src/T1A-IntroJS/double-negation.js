@@ -6,6 +6,7 @@
   *
   * @author F. de Sande
   * @since 04.feb.2020
+  *        updated Jan 30 2026
   * @desc Double negation
   *
   * @see {@link https://stackoverflow.com/questions/10467475/double-negation-in-javascript-what-is-the-purpose}
@@ -24,8 +25,9 @@
 
 'use strict';
 
-console.log('double negation: ');
-console.log(!!5);
+function doubleNegation() {
+  console.log('double negation: ');
+  console.log(!!5);
+}
 
-console.log('double negation: ');
-console.log(!!5);
+doubleNegation();

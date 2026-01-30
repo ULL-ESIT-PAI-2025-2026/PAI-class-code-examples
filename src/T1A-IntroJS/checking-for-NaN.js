@@ -14,6 +14,10 @@
 
 'use strict';
 
-console.log(NaN == NaN);
-console.log(NaN === NaN);
-console.log(isNaN(NaN));
+function checkForNaN() {
+  console.log(NaN == NaN);
+  console.log(NaN === NaN);
+  console.log(isNaN(NaN));
+}
+
+checkForNaN();

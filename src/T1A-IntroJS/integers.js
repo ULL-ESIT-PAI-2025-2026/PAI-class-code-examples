@@ -6,13 +6,17 @@
   *
   * @author F. de Sande
   * @since 04.feb.2020
+  *        updated Jan 30 2026
   * @desc Integer values. Examples
-  *
   */
 
 'use strict';
 
-console.log(Math.pow(2, 53));
-console.log(9007199254740992);
-console.log(9007199254740993);
-console.log(0.1 + 0.2);
+function integers() {
+  console.log(Math.pow(2, 53));
+  console.log(9007199254740992);
+  console.log(9007199254740993);
+  console.log(0.1 + 0.2);
+}
+
+integers();

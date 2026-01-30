@@ -6,13 +6,17 @@
   *
   * @author F. de Sande
   * @since 04.feb.2020
+  *        updated Jan 30 2026
   * @desc Logical operators
-  *
   */
 
 'use strict';
 
-console.log(5 - 5 || 2);
-console.log(5 - 5 && 2);
-console.log("hello" || "googbye");
-console.log("hello" && "goodbye");
+function logicalOperators() {
+  console.log(5 - 5 || 2);
+  console.log(5 - 5 && 2);
+  console.log("hello" || "googbye");
+  console.log("hello" && "goodbye");
+}
+
+logicalOperators();

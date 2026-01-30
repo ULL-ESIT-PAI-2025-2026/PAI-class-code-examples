@@ -6,29 +6,33 @@
   *
   * @author F. de Sande
   * @since 04.feb.2020
+  *        updated Jan 30 2026
   * @desc Coercion Rules
-  *
   */
 
 'use strict';
 
-console.log("5" + 5);
-console.log(false + 5);
-console.log(undefined + 5);
-console.log("10" > 5);
-console.log(NaN > 5);
-console.log(undefined > 5);
+function coercionRules() {
+  console.log("5" + 5);
+  console.log(false + 5);
+  console.log(undefined + 5);
+  console.log("10" > 5);
+  console.log(NaN > 5);
+  console.log(undefined > 5);
 
-console.log('===============================');
-console.log('foo' + (1 + 2));
-console.log(('foo' + 1) + 2);
+  console.log('===============================');
+  console.log('foo' + (1 + 2));
+  console.log(('foo' + 1) + 2);
 
-console.log('===============================');
-console.log("10" == 10);
-console.log(0 == false);
-console.log("" == false);
+  console.log('===============================');
+  console.log("10" == 10);
+  console.log(0 == false);
+  console.log("" == false);
 
-console.log('===============================');
-console.log(+-12);
-console.log(-+12);
-console.log(+"hello");
+  console.log('===============================');
+  console.log(+-12);
+  console.log(-+12);
+  console.log(+"hello");
+}
+
+coercionRules();

@@ -6,19 +6,22 @@
  *
  * @author F. de Sande
  * @since Feb 16 2022
- *        updated Jan 30 2026
  * @desc Using command line parameters with the yargs module
  *       Excute the program:
  *                           $ node command-line-parameters.js -x 10 -y 21
  * @see {@link https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/}
  * @see {@link https://github.com/yargs/yargs/blob/main/docs/examples.md}
+ *
  */
 
 'use strict';
 
+let argv = require('../../node_modules/yargs')(process.argv.slice(2)).argv;
+
 function main() {
-  let argv = require('yargs')(process.argv.slice(2)).argv;
   console.log('Params (%d, %d)', argv.x, argv.y);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
