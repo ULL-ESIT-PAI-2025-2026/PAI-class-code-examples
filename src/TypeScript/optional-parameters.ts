@@ -17,8 +17,11 @@ class Dog {
   constructor(age: number, name: string, favoriteToy?: string) {        
     this.age = age;        
     this.name = name;        
-    if (favoriteToy !== undefined) {            
-      this.favoriteToy = favoriteToy;        
+    if (favoriteToy !== undefined) {
+      this.favoriteToy = favoriteToy;
+    }
+    else {
+      this.favoriteToy = 'ball';
     }
   }
 }
@@ -26,6 +29,7 @@ class Dog {
 const main = (): void => {
   let germanShepherd: Dog = new Dog(7, 'Lucky');
   let chihuahua: Dog = new Dog(4, 'Osita', 'squeaky bone');
+  console.log(germanShepherd.favoriteToy);
 };
 
 main();
