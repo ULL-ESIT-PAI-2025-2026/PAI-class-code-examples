@@ -33,7 +33,7 @@ class Employee extends Person {
   }
 }
 
-export let main = async () => {
+const main = (): void => {
   const alan = new Employee('Alan', 'Turing', 'Front-end Developer');
   console.log(alan.getFullName());
   console.log(alan.describe());

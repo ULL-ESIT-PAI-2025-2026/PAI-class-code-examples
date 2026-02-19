@@ -31,7 +31,7 @@ class Counter {
   }
 }
 
-export let main = async () => {
+const main = (): void => {
   let counter = new Counter();
   console.log(counter.count()); // return a number
   console.log(counter.count(10)); // return an array

@@ -20,7 +20,7 @@ class Employee {
                                          // This value cannot be changed outside of the class 
 }
 
-export let main = async () => {
+const main = (): void => {
   const alan = new Employee('Alan', 'Turing', 'Front-end Developer');
   const noam = new Employee('Noam', 'Chomsky', 'Back-end Developer');
   const john = new Employee('John', 'Von Neuman', 'Team leader');

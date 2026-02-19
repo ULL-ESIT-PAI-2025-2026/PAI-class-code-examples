@@ -43,7 +43,7 @@ class Contractor extends Employee {
   }
 }
 
-export let main = async () => {
+const main = (): void => {
   // const employee = new Employee('Alan', 'Turing', 'Front-end Developer'); // This is an error, because Employee is abstract
   const alan = new Contractor('Alan', 'Turing', 100, 160); 
   const noam = new FullTimeEmployee('Noam', 'Chomsky', 12000);

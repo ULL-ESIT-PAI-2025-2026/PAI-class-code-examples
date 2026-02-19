@@ -23,7 +23,7 @@ class Dog {
   }
 }
 
-export let main = async () => {
+const main = (): void => {
   let germanShepherd: Dog = new Dog(7, 'Lucky');
   let chihuahua: Dog = new Dog(4, 'Osita', 'squeaky bone');
 };

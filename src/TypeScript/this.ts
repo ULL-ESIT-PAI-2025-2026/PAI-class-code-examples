@@ -10,7 +10,7 @@
   *
   *       In this program, the main function is being exported, which would make it possible 
   *       to use it in another module, by importing. This is for illustrative purposes only.
-  *       main() is written as an asynchronous arrow function. An asynchronous function could 
+  *       main() is written as an arrow function. An asynchronous function could 
   *       contain operations that execute in a non-blocking manner, such as called tasks that take time. 
   *       If you do not want the function to be asynchronous, just remove the word ‘async’ from the 
   *       function definition. In this particular case, everything would work the same way.
@@ -40,7 +40,7 @@ class Leaf {
   }
 }
 
-export let main = async () => {
+export const main = async () => {
   let bigLeaf: Leaf = new Leaf();
   bigLeaf.changeColor('fall');
 };

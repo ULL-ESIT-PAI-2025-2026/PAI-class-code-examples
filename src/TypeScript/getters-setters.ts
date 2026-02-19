@@ -43,7 +43,7 @@ class Person {
   private lastName: string;
 }
 
-export let main = async () => {
+const main = (): void => {
   const alan = new Person(113, 'Alan', 'Turing');
   console.log(alan.getFullName(), ' is ', alan.getAge(), ' years old.');
 };

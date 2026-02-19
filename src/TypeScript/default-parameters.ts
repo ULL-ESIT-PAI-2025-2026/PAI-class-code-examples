@@ -58,7 +58,7 @@ const numberOfDays = (year: number = new Date().getFullYear(), month: number): n
   return day;
 }
 
-export let main = async () => {
+const main = (): void => {
   console.log(numberOfDays(2019, 2));
   console.log(numberOfDays(undefined, 2));
 };

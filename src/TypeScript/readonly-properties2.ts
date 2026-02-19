@@ -22,7 +22,7 @@ class Person {
   }
 }
 
-export let main = async () => {
+const main = (): void => {
   const person = new Person(new Date(1990, 12, 25));
   person.birthDate = new Date(1991, 12, 25); // Compile error
 };

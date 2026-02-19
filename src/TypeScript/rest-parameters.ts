@@ -21,7 +21,7 @@ const getTotal = (...numbers: number[]): number => {
   return total;
 };
 
-export let main = async () => {
+const main = (): void => {
   console.log(getTotal()); 
   console.log(getTotal(10, 20)); 
   console.log(getTotal(10, 20, 30)); 

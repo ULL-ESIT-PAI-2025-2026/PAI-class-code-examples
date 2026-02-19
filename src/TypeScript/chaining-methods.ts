@@ -25,7 +25,7 @@ class Team {
   }
 } 
 
-export let main = async () => {
+const main = (): void => {
   let canarias: Team = new Team();
   canarias.teamFirst = 'Lenovo';
   canarias.teamLast = 'Tenerife';

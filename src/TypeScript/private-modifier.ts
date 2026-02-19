@@ -25,7 +25,7 @@ class Person {
   }
 }
 
-export let main = async () => {
+const main = (): void => {
   const alan = new Person('153-07-3130', 'Alan', 'Turing');
   console.log(alan.getFullName());
   console.log(alan.socialSecurityNumber);

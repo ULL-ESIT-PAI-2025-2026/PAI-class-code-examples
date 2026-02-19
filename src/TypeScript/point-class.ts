@@ -25,7 +25,7 @@ class Point {
   }
 }
 
-export let main = async () => {
+const main = (): void => {
   const point = new Point();
   point.scale(10);
   console.log('Point:', point.toString());

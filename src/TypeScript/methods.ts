@@ -17,7 +17,7 @@ class Dog {
   }
 } 
 
-export let main = async () => {
+const main = (): void => {
   let toby: Dog = new Dog();
   toby.makeNoise();
 };

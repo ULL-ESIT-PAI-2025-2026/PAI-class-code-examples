@@ -29,7 +29,7 @@ class Greeter {
   }
 }
 
-export let main = () => {
+const main = (): void => {
   const myGreeter = new Greeter('Earth');
   myGreeter.name = 'also not ok';
 };
