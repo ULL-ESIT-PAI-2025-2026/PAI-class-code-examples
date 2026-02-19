@@ -20,7 +20,7 @@ class Point {
     this.coordY *= factor;
   }
 
-  toString() : string {
+  toString(): string {
     return('(' + this.coordX + ', ' + this.coordY +')');
   }
 }
