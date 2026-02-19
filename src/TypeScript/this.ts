@@ -41,8 +41,8 @@ class Leaf {
 }
 
 export let main = async () => {
-  let bibLeaf: Leaf = new Leaf();
-  bibLeaf.changeColor('fall');
+  let bigLeaf: Leaf = new Leaf();
+  bigLeaf.changeColor('fall');
 };
 
 main();
