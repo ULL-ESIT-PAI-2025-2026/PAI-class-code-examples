@@ -36,7 +36,7 @@ function makeDate(mOrTimestamp: number, day?: number, year?: number): Date {
   }
 }
 
-const main = (): void => {
+export function main() {
   const DATE1 = makeDate(12345678);
   const DATE2 = makeDate(5, 5, 5);
   const DATE3 = makeDate(1, 3);  // Function can't be called with 2 arguments

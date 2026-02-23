@@ -17,7 +17,7 @@ class Dog {
   }
 } 
 
-const main = (): void => {
+export function main() {
   let toby: Dog = new Dog();
   toby.makeNoise();
 };

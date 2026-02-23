@@ -35,7 +35,7 @@ class FibonacciGenerator {
   private f1: number = 1; // Next term to be returned
 }
 
-const main = (): void => {
+export function main() {
   const LIMIT = 1000; 
   let fibgen = new FibonacciGenerator();
   let sum = 0;

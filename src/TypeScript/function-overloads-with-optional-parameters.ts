@@ -28,7 +28,7 @@ function sum(sumand1: number, sumand2: number, sumand3?: number): number {
     return sumand1 + sumand2;
 }
 
-const main = (): void => {
+export function main() {
   console.log(sum(2, 3));
   console.log(sum(2, 3, 5));
 };

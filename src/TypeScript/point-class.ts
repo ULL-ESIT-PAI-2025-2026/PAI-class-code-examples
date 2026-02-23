@@ -25,7 +25,7 @@ class Point {
   }
 }
 
-const main = (): void => {
+export function main() {
   const point = new Point();
   point.scale(10);
   console.log('Point:', point.toString());

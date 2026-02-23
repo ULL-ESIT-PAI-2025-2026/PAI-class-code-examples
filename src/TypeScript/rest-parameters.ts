@@ -21,7 +21,7 @@ const getTotal = (...numbers: number[]): number => {
   return total;
 };
 
-const main = (): void => {
+export function main() {
   console.log(getTotal()); 
   console.log(getTotal(10, 20)); 
   console.log(getTotal(10, 20, 30)); 

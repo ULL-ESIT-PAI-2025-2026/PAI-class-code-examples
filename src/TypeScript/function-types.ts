@@ -14,7 +14,7 @@ interface StringFormat {
   (str: string, isUpper: boolean): string
 }
 
-const main = (): void => {
+export function main() {
   let format: StringFormat;
   format = function (str: string, isUpper: boolean): string {
     return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();

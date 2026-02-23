@@ -36,7 +36,7 @@ class Point2 {
   }
 }
 
-const entryPoint = () => {
+export function entryPoint() {
   let point1: Point1 = new Point1();
   let point2: Point2 = new Point2('Pay attention');
 };

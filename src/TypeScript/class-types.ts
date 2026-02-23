@@ -36,7 +36,7 @@ class Square implements Shape, Editable {
   }
 }
 
-const main = (): void => {
+export function main() {
   const square: Square = new Square(true);
   square.draw();
   square.commitChanges();

@@ -23,7 +23,7 @@ class Person {
   }
 }
 
-const main = (): void => {
+export function main() {
   const alan = new Person('153-07-3130', 'Alan', 'Turing');
   console.log(alan.getFullName());
   // console.log(alan.socialSecurityNumber);

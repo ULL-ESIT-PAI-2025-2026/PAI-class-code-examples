@@ -26,7 +26,7 @@ class Dog {
   }
 }
 
-const main = (): void => {
+export function main() {
   let germanShepherd: Dog = new Dog(7, 'Lucky');
   let chihuahua: Dog = new Dog(4, 'Osita', 'squeaky bone');
   console.log(germanShepherd.favoriteToy);

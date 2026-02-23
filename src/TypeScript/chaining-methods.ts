@@ -25,7 +25,7 @@ class Team {
   }
 } 
 
-const main = (): void => {
+export function main() {
   let canarias: Team = new Team();
   canarias.teamFirst = 'C. B.';
   canarias.teamLast = 'Canarias';

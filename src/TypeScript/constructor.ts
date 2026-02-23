@@ -23,7 +23,7 @@ class BlueSkyProfile {
   // Methods would go here
 }
 
-const main = (): void => {
+export function main() {
   let myProfile: BlueSkyProfile = new BlueSkyProfile ('Sande', 32, true);
   console.log(myProfile.name + ' has ' + myProfile.followers + ' followers on BlueSky!');
   console.log(myProfile.name + ' is verified: ' + myProfile.verified);

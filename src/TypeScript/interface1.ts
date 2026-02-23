@@ -20,7 +20,7 @@ function printSize(dimension: Dimension): void {
   console.log('The image height is ' + dimension.height);
 }
 
-const main = (): void => {
+export function main() {
   let image: Dimension = {
     width: '200px',
     height: '300px'
