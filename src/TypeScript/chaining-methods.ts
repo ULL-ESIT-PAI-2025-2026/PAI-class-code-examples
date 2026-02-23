@@ -27,8 +27,8 @@ class Team {
 
 const main = (): void => {
   let canarias: Team = new Team();
-  canarias.teamFirst = 'Lenovo';
-  canarias.teamLast = 'Tenerife';
+  canarias.teamFirst = 'C. B.';
+  canarias.teamLast = 'Canarias';
   let hincha: Supporter = new Supporter();
   hincha.team = canarias;
   console.log(hincha.cheer(hincha.team.makeName()).toUpperCase());
