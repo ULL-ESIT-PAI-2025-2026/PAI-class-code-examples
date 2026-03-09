@@ -182,5 +182,9 @@ class Clock {
   }
 }
 
-let clock: Clock = new Clock(document.body, 800);
+export function main() {
+  let clock: Clock = new Clock(document.body, 800);
 console.log(clock);
+};
+
+main();
