@@ -20,11 +20,11 @@ class Face {
   public draw(): void {
     this.context.beginPath();
     this.context.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
-    // this.context.moveTo(110, 75);
+    this.context.moveTo(110, 75);
     this.context.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
-    // this.context.moveTo(65, 65);
+    this.context.moveTo(65, 65);
     this.context.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
-    // this.context.moveTo(95, 65);
+    this.context.moveTo(95, 65);
     this.context.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
     this.context.stroke();
   }
