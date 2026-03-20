@@ -7,11 +7,15 @@
  * @author F. de Sande
  * @since Apr 16, 2023
  * @description Tic Tac Toe Example. Final solution
- *              Compile with tsc --target es2015 <source.ts>
+ *              Compile with tsc 
  */
 
 const HUMAN = 'x';
 const COMPUTER = 'o';
+
+const freeBoxes: HTMLDivElement[] = [];     
+// Map of box number -> HUMAN or COMPUTER
+const takenBoxes: (string | undefined)[] = []; 
 
 /** 
   * @desc Assigns an empty emptyBox (box) to its new owner (HUMAN or COMPUTER)
@@ -58,7 +62,7 @@ const isGameOver = function(): boolean {
 
 const displayWinner = function(): void {
   const WINNER = getWinner();
-  const resultContainer = document.querySelector('#results');
+  const resultContainer = document.querySelector('results')!; // Aseguramos que el método no devuelva null
   const header = document.createElement('h1');
   if (WINNER === HUMAN) {
     header.textContent = 'You win!';
@@ -100,13 +104,9 @@ const getWinner = function() {
   return checkBoxes(0, 4, 8) || checkBoxes(2, 4, 6);
 }
 
-const freeBoxes = [];
-// Map of box number -> HUMAN or COMPUTER
-const takenBoxes = {};
-
-
 const main = function() {
-  const boxes: NodeList = document.querySelectorAll('#grid div')! as NodeList;
+  // const boxes: NodeList = document.querySelectorAll('#grid div')! as NodeList;
+  const boxes = document.querySelectorAll('#grid div')! as NodeListOf<HTMLDivElement>;
   for (const box of boxes) {
     box.addEventListener('click', changeToX);
     freeBoxes.push(box);

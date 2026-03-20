@@ -7,7 +7,7 @@
  * @author F. de Sande
  * @since Apr 16, 2023
  * @description Tic Tac Toe Example. Step 2
- *              Compile with tsc --target es2015 <source.ts>
+ *              Compile with tsc 
  */
 
 const changeToX = function(event: Event): void {

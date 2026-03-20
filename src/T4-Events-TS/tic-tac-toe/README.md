@@ -8,7 +8,7 @@ There are 5 different versions of the code:
 
 All versions share the same tic-tac-toe.css file
 
-Compile each source code using:
-  tsc --target es2015 <source.ts>
+Compile all codes using:
+  tsc 
 
 The .js files obtained are linked in the corresponding .html file

@@ -7,11 +7,15 @@
  * @author F. de Sande
  * @since Apr 16, 2023
  * @description Tic Tac Toe Example. Step 2. Better(?) approach: Global Variable
- *              Compile with tsc --target es2015 <source.ts>
+ *              Compile with tsc 
  */
 
 const HUMAN = 'x';
 const COMPUTER = 'o';
+
+const freeBoxes: HTMLDivElement[] = [];     
+// Map of box number -> HUMAN or COMPUTER
+const takenBoxes: (string | undefined)[] = []; 
 
 /** 
   * @desc Assigns an empty box to an owner 
@@ -20,7 +24,7 @@ const COMPUTER = 'o';
   * @param {object} emptyBox. The HTML Element that represents the Box (it is a div)
   * @param {string} owner It can be HUMAN or COMPUTER 
   */
-const assignBox = function(emptyBox: HTMLElement, owner: string) {
+const assignBox = function(emptyBox: HTMLDivElement, owner: string) {  
   const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
   const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
   let image = document.createElement('img');
@@ -34,7 +38,7 @@ const assignBox = function(emptyBox: HTMLElement, owner: string) {
 }
 
 const changeToX = function(event: Event) {
-  assignBox(event.currentTarget as HTMLElement, HUMAN);
+  assignBox(event.currentTarget as HTMLDivElement, HUMAN);
   if (isGameOver()) {
     displayWinner();
   } else {
@@ -60,7 +64,7 @@ const isGameOver = function() {
 const displayWinner = function() {
   const winner = getWinner();
 
-  const resultContainer = document.querySelector('#results');
+  const resultContainer = document.querySelector('#results')!;
   const header = document.createElement('h1');
   if (winner === HUMAN) {
     header.textContent = 'You win!';
@@ -104,12 +108,8 @@ const getWinner = function() {
   return rowResult || colResult || diagonalResult;
 }
 
-let freeBoxes = [];
-// Map of box number -> HUMAN or COMPUTER
-let takenBoxes = {};
-
 const main = function() {
-  const boxes: NodeList = document.querySelectorAll('#grid div')! as NodeList;
+  const boxes = document.querySelectorAll('grid > div')! as NodeListOf<HTMLDivElement>;
   for (const box of boxes) {
     box.addEventListener('click', changeToX);
     freeBoxes.push(box);
