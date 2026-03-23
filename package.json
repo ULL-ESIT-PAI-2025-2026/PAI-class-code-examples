@@ -36,7 +36,8 @@
     "taffydb": "^2.7.3",
     "uc.micro": "^1.0.6",
     "underscore": "^1.12.1",
-    "xmlcreate": "^2.0.3"
+    "xmlcreate": "^2.0.3",
+     "typescript": "next"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
