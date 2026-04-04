@@ -22,19 +22,19 @@ function onInnerClick(event: Event): void {
 }
 
 function onResetClick(event: Event): void {
-  const outer: HTMLDivElement = event.currentTarget as HTMLDivElement;
-  const inner: HTMLDivElement = event.currentTarget as HTMLDivElement;
+  const outer = document.querySelector('#outer')!;
+  const inner = document.querySelector('#inner')!;
   inner.classList.remove('selected');
   outer.classList.remove('selected');
 }
 
 function main() {
-  const outer = document.querySelector('#outer') as HTMLDivElement;
-  const inner = document.querySelector('#inner') as HTMLDivElement;
-  const reset = document.querySelector('button') as HTMLButtonElement;
-  outer.addEventListener('click', onOuterClick);
-  inner.addEventListener('click', onInnerClick);
-  reset.addEventListener('click', onResetClick);
+  const outer = document.querySelector('#outer')! as HTMLDivElement;
+  const inner = document.querySelector('#inner')! as HTMLDivElement;
+  const reset = document.querySelector('button')! as HTMLButtonElement;
+  outer.addEventListener('click', onOuterClick); // Listener for the outer div
+  inner.addEventListener('click', onInnerClick); // Listener for the inner div
+  reset.addEventListener('click', onResetClick); // Listener for the reset button
 }
 
 main();
