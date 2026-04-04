@@ -24,8 +24,8 @@ function onInnerClick(event: Event): void {
 }
 
 function onResetClick(event: Event): void {
-  const outer: HTMLDivElement = event.currentTarget as HTMLDivElement;
-  const inner: HTMLDivElement = event.currentTarget as HTMLDivElement;
+  const outer = document.querySelector('#outer')!;
+  const inner = document.querySelector('#inner')!;
   inner.classList.remove('selected');
   outer.classList.remove('selected');
 }
