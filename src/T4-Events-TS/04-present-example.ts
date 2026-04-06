@@ -10,6 +10,10 @@
  *              Event objects
  *              When the image is clicked, the openPresent function will be executed with 
  *              the appropriate event object passed to it automatically by the event system. 
+ *              In the method call image.addEventListener('click', openPresent);
+ *              the listener (openPresent) is registered as the callback for the event.
+ *              The event parameter is passed (automatically) to openPresent by the browser when the event is
+ *              fired.
  */
 
 function openPresent(event: Event): void {
