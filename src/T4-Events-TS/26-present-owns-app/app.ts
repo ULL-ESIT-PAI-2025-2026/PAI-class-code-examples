@@ -21,8 +21,6 @@ import {PRESENT_SOURCES} from './present-sources.js';
  *              The class holds Present objects in an array
  */
 export class App {
-  private presentContainer: HTMLElement; /** DOM element to host the presents */
-  private titleContainer: HTMLElement;   /** DOM element corresponding to the <h2> text */ 
   private presents: Present[] = [];      /** Array of presents */
   private openedCount: number = 0;       /** Holds the number of presents that have been opened */
 
@@ -31,9 +29,8 @@ export class App {
    * @param presentContainer- The DOM element that hosts the presents
    * @param titleContainer - The DOM element that holds the header text
    */
-  constructor(presentContainer: HTMLElement, titleContainer: HTMLElement) {
-    this.presentContainer = presentContainer;
-    this.titleContainer = titleContainer;
+  constructor(private presentContainer: HTMLElement, 
+              private titleContainer: HTMLElement) {
     this.fillPresentContainer();
   } 
   
@@ -44,8 +41,8 @@ export class App {
    */
   private fillPresentContainer(): void {
     for (const SOURCE of PRESENT_SOURCES) {
-      const PRESENT = new Present(this.presentContainer, SOURCE, this);
-      this.presents.push(PRESENT);
+      const present = new Present(this.presentContainer, SOURCE, this);
+      this.presents.push(present);
     }
   }
   

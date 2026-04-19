@@ -16,10 +16,7 @@ import {App} from './app.js';
 
 /** @description Class to represent a single present */
 export class Present {
-  private containerElement: HTMLElement;  /** DOM element that holds the presents */
-  private presentSrc: string;             /** URL of the present image */
   private image: HTMLImageElement;        /** New DOM element to hold the present image */
-  private app: App;                       /** The class (App) that holds this (object) present */
 
   /**
    * @description Sets up a present object placing it in the page (DOM)
@@ -28,11 +25,10 @@ export class Present {
    * @param presentSrc - URL for the (new) image for this present
    * @param app - The object that owns this present
    */
-  constructor(containerElement: HTMLElement, presentSrc: string, app: App) {
-    this.containerElement = containerElement;
-    this.presentSrc = presentSrc;
-    this.app = app;  // <-- POOR STYLE: DON'T DO THIS:
-    
+  constructor(private containerElement: HTMLElement, 
+              private presentSrc: string, 
+              private app: App) {  // <-- POOR STYLE: DON'T DO THIS:
+
     // Create image and append to container.
     this.image = document.createElement('img');
     const INITIAL_IMAGE = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
