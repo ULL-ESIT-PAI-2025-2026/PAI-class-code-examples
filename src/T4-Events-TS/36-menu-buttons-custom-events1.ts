@@ -12,17 +12,19 @@
 /** @description Class to hold the (array of) buttons of the page */
 class Menu {
   /** @private */
-  private buttonContainer: HTMLElement; /** The The DOM element that will host the button */
-  private statusBar: HTMLElement;       /** The The DOM element that will host the <h1> text with the button info */
-  private buttons: Button[];            /** Array of Button objects */
+  // private buttonContainer: HTMLElement; /** The The DOM element that will host the button */
+  // private statusBar: HTMLElement;       /** The The DOM element that will host the <h1> text with the button info */
+  // private buttons: Button[];            /** Array of Button objects */
 
   /** 
    * @constructor 
    * @description Holds an array of Buttons which are created when the Menu is created 
    */
-  constructor() {
-    this.buttonContainer = document.querySelector('#menu');
-    this.statusBar = document.querySelector('#status-bar');
+  constructor(private buttonContainer: HTMLElement, /** The The DOM element that will host the button */
+              private statusBar: HTMLElement,       /** The The DOM element that will host the <h1> text with the button info */
+              private buttons: Button[]) {          /** Array of Button objects */
+    this.buttonContainer = document.querySelector('#menu')!;
+    this.statusBar = document.querySelector('#status-bar')!;
     this.buttons = [
       new Button(this.buttonContainer, 'A'),
       new Button(this.buttonContainer, 'B'),
@@ -35,7 +37,7 @@ class Menu {
    * @method
    * @description Console logs and prints the button changing the DOM
    */
-  private showButtonClicked = (event) => {
+  private showButtonClicked = (event: Event) => {
     console.log('Menu notified!');
     const BUTTON_NAME: string = event.currentTarget.textContent;
     this.statusBar.textContent = BUTTON_NAME + ' was clicked';
