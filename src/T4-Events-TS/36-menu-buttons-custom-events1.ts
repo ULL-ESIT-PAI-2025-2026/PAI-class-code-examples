@@ -9,7 +9,7 @@
  * @description Events. Menu and buttons with custom Events
  */
 
-/** @description Class to hold the (array of) buttons of the page */
+/** @classdesc Holds the (array of) buttons of the page */
 class Menu {
   /** 
    * @constructor 
@@ -43,9 +43,6 @@ class Menu {
  * @description Class for the buttons objects to be placed in the page
  */
 class Button {
-  private containerElement;  /** The The DOM element that will host the button */
-  private text = '';  /** The button text */
-
   /**
    * @description Sets up a button object placing it in the page (DOM)
    *              It set up an event listener for the click event on the button
@@ -53,7 +50,8 @@ class Button {
    * @param containerElement - The DOM element that will host the button
    * @param text - Button text
    */
-  constructor(containerElement: HTMLElement, text: string) {
+  constructor(private containerElement: HTMLElement, 
+              private text: string) {                
     this.containerElement = containerElement;
     this.text = text;
     const button: HTMLButtonElement = document.createElement('button');

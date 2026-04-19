@@ -11,15 +11,18 @@
 
 /** 
  * @class
- * @description Class to hold the (array of) buttons of the page 
+ * @classdesc Holds the (array of) buttons of the page 
  */
 class Menu {
   /** 
    * @description Holds an array of Buttons creat0ed in the Menu constructor 
    *              Class attributes are declared and initialized in constructor
+   * @param buttonContainer The The DOM element that will host the button
+   * @param statusBar The DOM element that will host the <h1> text with the button info
+   * @param buttons The buttons array
    */
-  constructor(private buttonContainer: HTMLElement = document.querySelector('#menu')! as HTMLElement, /** The The DOM element that will host the button */
-              private statusBar: HTMLElement = document.querySelector('#status-bar')! as HTMLElement, /** The The DOM element that will host the <h1> text with the button info */
+  constructor(private buttonContainer: HTMLElement = document.querySelector('#menu')! as HTMLElement, 
+              private statusBar: HTMLElement = document.querySelector('#status-bar')! as HTMLElement, 
               private buttons: Button[] = [new Button(buttonContainer, 'A'), new Button(buttonContainer, 'B'), new Button(buttonContainer, 'C')]
   ) {
     document.addEventListener('button-clicked', this.showButtonClicked);
@@ -34,14 +37,8 @@ class Menu {
   }
 }
 
-/** 
- * @class
- * @description Class for the buttons objects to be placed in tha page 
- */
+/** @classdesc Class for the buttons objects to be placed in tha page */
 class Button {
-  private containerElement: HTMLElement;  /** The The DOM element that will host the button */
-  private text: string = '';              /** The button text */
-
   /**
    * @description Sets up a button object placing it in the page (DOM)
    *              It set up an event listener for the click event on the button
@@ -49,9 +46,8 @@ class Button {
    * @param {Element} containerElement - The DOM element that will host the button
    * @param {String} text - Button text
    */
-  constructor(containerElement: HTMLElement, text: string) {
-    this.containerElement = containerElement;
-    this.text = text;
+  constructor(private containerElement: HTMLElement, 
+              private text: string) {
     let button: HTMLButtonElement = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
