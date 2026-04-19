@@ -52,8 +52,6 @@ class Button {
    */
   constructor(private containerElement: HTMLElement, 
               private text: string) {                
-    this.containerElement = containerElement;
-    this.text = text;
     const button: HTMLButtonElement = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);

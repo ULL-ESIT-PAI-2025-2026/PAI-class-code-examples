@@ -43,8 +43,8 @@ class Button {
    * @description Sets up a button object placing it in the page (DOM)
    *              It set up an event listener for the click event on the button
    *              Notifies Menu when clicked, so that Menu can update the <h1>
-   * @param {Element} containerElement - The DOM element that will host the button
-   * @param {String} text - Button text
+   * @param containerElement - The DOM element that will host the button
+   * @param text - Button text
    */
   constructor(private containerElement: HTMLElement, 
               private text: string) {
