@@ -11,11 +11,6 @@
 
 /** @description Class to hold the (array of) buttons of the page */
 class Menu {
-  /** @private */
-  // private buttonContainer: HTMLElement; /** The The DOM element that will host the button */
-  // private statusBar: HTMLElement;       /** The The DOM element that will host the <h1> text with the button info */
-  // private buttons: Button[];            /** Array of Button objects */
-
   /** 
    * @constructor 
    * @description Holds an array of Buttons which are created when the Menu is created 
