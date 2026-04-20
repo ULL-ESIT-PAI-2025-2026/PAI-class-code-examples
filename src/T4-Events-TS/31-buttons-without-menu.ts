@@ -23,8 +23,6 @@ class Button {
    * @param text - Button text
    */
   constructor(private containerElement: HTMLElement, text: string) {
-    this.containerElement = containerElement;
-
     let button: HTMLButtonElement = document.createElement('button');
     button.textContent = text;  // textContent is a property of (DOM) Node
     this.containerElement.append(button);

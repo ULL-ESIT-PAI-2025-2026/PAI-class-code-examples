@@ -16,9 +16,6 @@
  * @property {string} text - The button text
  */
 class Button {
-  private containerElement: HTMLElement;  
-  private text: string = '';             
-
   /**
    * @constructor
    * @description Sets up a button object placing it in the page (DOM)
@@ -26,12 +23,9 @@ class Button {
    * @param containerElement - The DOM element that will host the button
    * @param text - Button text
    */
-  constructor(containerElement: HTMLElement, text: string) {
-    this.containerElement = containerElement;
-    this.text = text;
-
+  constructor(private containerElement: HTMLElement, 
+              private text: string) {
     this.onClick = this.onClick.bind(this);
-
     const button: HTMLButtonElement = document.createElement('button');
     button.textContent = text;
     button.addEventListener('click', this.onClick);
