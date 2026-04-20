@@ -32,10 +32,7 @@ class Button {
     this.containerElement.append(button);
   }
 
-  /**
-   * @method
-   * @description Event handler method for click events on the button
-   */
+  /** @method * @description Event handler method for click events on the button */
   private onClick(): void {
     console.log('clicked: ' + this.text);
   }
