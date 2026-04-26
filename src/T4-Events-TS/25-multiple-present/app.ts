@@ -13,8 +13,8 @@ import {Present} from './present.js';
 import {PRESENT_SOURCES} from './present-sources.js';
 
 /** 
- * @description Class to represent a set of presents
- *              The class holds Present objects in an array
+ * @classdesc Class to represent a set of presents
+ *            The class holds Present objects in an array
  */
 export class App {
   private presents: Present[] = [];      /** Array of presents */

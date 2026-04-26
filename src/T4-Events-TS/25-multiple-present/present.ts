@@ -9,13 +9,14 @@
  * @description Events. OO Present. Multiple Presents. Present class
 */
 
-/** @description Class to represent a single present */
+/** @classdesc Represents a single present */
 export class Present {
   /**
    * @constructor
-   * @description Fills the presents array
+   * @description Inserts the Present image HTML element in the DOM
+                  The present is created with it's initial (package) image
    * @param presentContainer- The DOM element that hosts the presents
-   * @param presentSrc - URL of the new image for this present
+   * @param presentSrc - URL of the image for this present
    */
   constructor(private containerElement: HTMLElement, private presentSrc: string, private image?: HTMLImageElement) {
     // Create image and append to container.

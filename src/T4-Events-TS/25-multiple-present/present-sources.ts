@@ -10,7 +10,7 @@
  *              Defines the URLs for the present images
  */
 
-/** An array holding the presents images URLs */
+/** Array holding the presents final (specific) images URLs */
 export const PRESENT_SOURCES: string[] = [
   'https://media.giphy.com/media/27ppQUOxe7KlG/giphy.gif',
   'https://media.giphy.com/media/LEcRaYyUptIxG/giphy.gif',
