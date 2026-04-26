@@ -11,9 +11,9 @@
 
 /** 
  * @class
- * @description Represents a present 
- *              Each present has an original image. 
- *              When it is clicked, it is replaced with a (new) present image.
+ * @classdesc Represents a present 
+ *            Each present has an original image. 
+ *            When it is clicked, it is replaced with a (new) present image.
  */
 class Present {
   /**
