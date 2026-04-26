@@ -11,20 +11,18 @@
  */
 
 /**
- * @class
- * @description Present Class. Represents a Present.
- *              Initially the present has an image that will be replaced
- *              by the present image when the original is clicked
+ * @classdesc Present Class. Represents a Present.
+ *            Initially the present has an image that will be replaced
+ *            by the present image when the original is clicked
  */
 export class Present {
+  private image: HTMLImageElement;
   /*
    * @constructor
    * @param containerElement - DOM element that holds the present image
    * @param presentSrc - URL of the image to show when the present is opened
    */
-  constructor(private containerElement: HTMLElement, private presentSrc: string, private image?: HTMLImageElement) {
-    this.containerElement = containerElement;
-    this.presentSrc = presentSrc;
+  constructor(private containerElement: HTMLElement, private presentSrc: string) {
     this.image = document.createElement('img');
     this.image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
     this.image.addEventListener('click', this.openPresent);
