@@ -12,14 +12,9 @@
 import {Present} from './present.js';
 import {PRESENT_SOURCES} from './present-sources.js';
 
-/**
- * @class
- * @description App Class. Holds and manages multiple presents (objects)
- */
+/** * @classdesc Holds and manages multiple presents (objects) */
 export class App {
-  private presentContainer: HTMLElement; /** DOM element to host the presents */
-  private titleContainer: HTMLElement;   /** DOM element corresponding to the <h2> text */ 
-  private presents: Present[] = [];    /** Array of presents */
+  private presents: Present[] = []; /** Array of presents */
   private openedCount: number = 0;  /** Holds the number of presents that have been opened */
 
   /*
@@ -27,9 +22,8 @@ export class App {
    * @param {object} presentContainer - DOM element that holds the array of presents
    * @param {object} titleContainer - DOM element that holds the header title of the page
    */
-  constructor(presentContainer: HTMLElement, titleContainer: HTMLElement) {
-    this.presentContainer = presentContainer;
-    this.titleContainer = titleContainer;
+  constructor(private presentContainer: HTMLElement, 
+              private titleContainer: HTMLElement) {
     this.fillPresentContainer();
     document.addEventListener('present-opened', this.onPresentOpened);
   }
