@@ -11,10 +11,9 @@
   *              NOTE: This is a BAD Practice! Don't do this.
   */
 
-
 import {App} from './app.js';
 
-/** @description Class to represent a single present */
+/** @classdesc Represents a single present */
 export class Present {
   private image: HTMLImageElement;        /** New DOM element to hold the present image */
 
@@ -26,10 +25,10 @@ export class Present {
    * @param app - The object that owns this present
    */
   constructor(private containerElement: HTMLElement, 
-              private presentSrc: string, 
+              private presentSrc: string,  /** URL for the final (opened) image of the present */
               private app: App) {  // <-- POOR STYLE: DON'T DO THIS:
 
-    // Create image and append to container.
+    // Create image and append to container
     this.image = document.createElement('img');
     const INITIAL_IMAGE = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
     this.image.src = INITIAL_IMAGE;  
@@ -40,8 +39,9 @@ export class Present {
   /**
    * @method
    * @description Listener for the click event on images (presents)
-   *              Replaces the initial image with the present (new) image
+   *              Replaces the initial image with the present (opened) image
    *              Removes the click event listener
+   *              Calls the app onPresentOpened() method 
    * @param event - The event object 
    */
   private openPresent = (event: Event): void => {

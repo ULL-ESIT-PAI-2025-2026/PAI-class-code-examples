@@ -17,8 +17,8 @@ import {Present} from './present.js';
 import {PRESENT_SOURCES} from './present-sources.js';
 
 /** 
- * @description Class to represent a set of presents
- *              The class holds Present objects in an array
+ * @classdesc Class to represent a set of presents
+ *            The class holds Present objects in an array
  */
 export class App {
   private presents: Present[] = [];      /** Array of presents */
@@ -29,13 +29,11 @@ export class App {
    * @param presentContainer- The DOM element that hosts the presents
    * @param titleContainer - The DOM element that holds the header text
    */
-  constructor(private presentContainer: HTMLElement, 
-              private titleContainer: HTMLElement) {
+  constructor(private presentContainer: HTMLElement, private titleContainer: HTMLElement) {
     this.fillPresentContainer();
   } 
   
   /**
-   * @method
    * @description Creates the Present objects and stores them in the presents array 
    *              Each present is given a reference (this) to this app
    */
