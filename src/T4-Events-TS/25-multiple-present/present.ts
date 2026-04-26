@@ -18,7 +18,9 @@ export class Present {
    * @param presentContainer- The DOM element that hosts the presents
    * @param presentSrc - URL of the image for this present
    */
-  constructor(private containerElement: HTMLElement, private presentSrc: string, private image?: HTMLImageElement) {
+  constructor(private containerElement: HTMLElement, 
+              private presentSrc: string,  /** URL for the final (opened) image of the present */
+              private image?: HTMLImageElement) {
     // Create image and append to container.
     this.image = document.createElement('img');
     const INITIAL_IMAGE: string = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
