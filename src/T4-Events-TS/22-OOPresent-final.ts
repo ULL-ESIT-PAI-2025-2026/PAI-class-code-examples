@@ -11,13 +11,12 @@
 
 /** 
  * @class
- * @description Represents a present 
- *              Each present has an original image. When it is clicked, it is replaced
- *              with a (new) present image.
+ * @classdesc Represents a present 
+ *            Each present has an original image. When it is clicked, it is replaced
+ *            with a (new) present image.
  */
 class Present {
   /**
-   * @constructor
    * @description Sets up a present object (new image) placing it in the page (DOM)
    *              Creates image and append to container
    * @param containerElement - The DOM element that will host the present (image)
@@ -30,7 +29,6 @@ class Present {
   }
 
   /**
-   * @method
    * @description Listener. Changes the DOM with the new image and removes the listener
    * @param event - Event object 
    */
@@ -42,7 +40,7 @@ class Present {
 }
 
 function main(): void {
-  const containerElement: HTMLElement = document.querySelector('#presents');
+  const containerElement: HTMLElement = document.querySelector('#presents')!;
   const present = new Present(containerElement);
 }
 
