@@ -15,7 +15,7 @@ import {App} from './app.js';
 
 /** @classdesc Represents a single present */
 export class Present {
-  private image: HTMLImageElement;        /** New DOM element to hold the present image */
+  private image: HTMLImageElement; /** New DOM element to hold the present image */
 
   /**
    * @description Sets up a present object placing it in the page (DOM)

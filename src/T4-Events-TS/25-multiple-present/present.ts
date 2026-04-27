@@ -11,6 +11,8 @@
 
 /** @classdesc Represents a single present */
 export class Present {
+  private image: HTMLImageElement; /** New DOM element to hold the present image */
+
   /**
    * @constructor
    * @description Inserts the Present image HTML element in the DOM
@@ -19,8 +21,7 @@ export class Present {
    * @param presentSrc - URL of the image for this present
    */
   constructor(private containerElement: HTMLElement, 
-              private presentSrc: string,  /** URL for the final (opened) image of the present */
-              private image?: HTMLImageElement) {
+              private presentSrc: string) {  /** URL for the final (opened) image of the present */
     // Create image and append to container.
     this.image = document.createElement('img');
     const INITIAL_IMAGE: string = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';

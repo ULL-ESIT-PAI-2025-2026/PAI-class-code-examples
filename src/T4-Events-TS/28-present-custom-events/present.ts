@@ -32,7 +32,7 @@ export class Present {
   /** @method openPresent 
    *  @description Event handler for click events
    *               Fires the 'present-opened' event
-   *  @param {object} event - Event object
+   *  @param event - Event object
    */
   private openPresent = (event: Event): void => {
     this.image!.src = this.presentSrc;

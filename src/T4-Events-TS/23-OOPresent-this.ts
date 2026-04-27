@@ -6,7 +6,7 @@
  *
  * @author F. de Sande
  * @since Apr 23, 2023
- * @description JS Events. OO Present Class with this bug
+ * @description JS Events. OO Present Class 
  */
 
 /** 
@@ -16,13 +16,15 @@
  *            When it is clicked, it is replaced with a (new) present image.
  */
 class Present {
+  private image: HTMLImageElement;
+
   /**
    * @constructor
    * @description Sets up a present object (new image) placing it in the page (DOM)
    *              Creates an image and appends it to the container
    * @param containerElement - The DOM element that will host the present (image)
    */
-  constructor(private containerElement: HTMLElement, private image?: HTMLImageElement) {
+  constructor(private containerElement: HTMLElement) {
     this.image = document.createElement('img');
     this.image.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/gift-icon.png';
     this.image.addEventListener('click', this.openPresent);

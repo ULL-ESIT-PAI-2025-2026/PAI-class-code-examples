@@ -17,8 +17,8 @@
  */
 class Present {
   /**
-   * @description Sets up a present object (new image) placing it in the page (DOM)
-   *              Creates image and append to container
+   * @classdesc Sets up a present object (new image) placing it in the page (DOM)
+   *            Creates image and append to container
    * @param containerElement - The DOM element that will host the present (image)
    */
   constructor(private containerElement: HTMLElement) {
