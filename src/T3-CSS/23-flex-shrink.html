@@ -19,10 +19,36 @@
 </head>
 <body>
   <h1>flex-shrink</h1>
+  <p> flex-shrink no está establecido y por tanto su valor es flex-shrink:1 (valor por defecto) </p>
+  <p> En estas circunstancias los flex-items "se encogen" para adaptarse al espacio disponible </p>
+  <p> En este ejemplo el ancho del contenedor es 600px y cada uno de los 3 flex-items tiene 500px de ancho.
+  Encajan en el espacio disponible solo porque "se encogen".</p>
   <div id="flex-container">
-    <span class="flex-item"></span>
-    <div class="flex-item"></div>
-    <span class="flex-item"></span>
+    <span class="flex-item">Uno</span>
+    <div class="flex-item">dos</div>
+    <span class="flex-item">Tres</span>
   </div>
+  <h2>The CSS (flex-shrink.css) code for this page:</h1>
+  <pre>
+  <code>
+    #flex-container {
+      display: flex;
+      align-items: flex-start;
+      border: 2px solid black;
+      height: 150px;
+      width: 600px;
+    }
+
+    .flex-item {
+      width: 500px;
+      height: 100px;
+
+      border-radius: 10px;
+      background-color: purple;
+      margin: 5px;
+    }
+  </code>
+  </pre>
 </body>
 </html>
+
