@@ -15,17 +15,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>24 PAI: HTML & CSS</title>
+  <link rel=stylesheet href="csscode.css">
   <link rel=stylesheet href="flex-shrink1.css">
 </head>
 <body>
   <h1>flex-shrink: 0</h1>
-  <p>
+  <h2>
   Setting flex-shrink: 0; undoes the shrinking behavior, and the flex items do not shrink in any circumstance:
-  </p>
+  </h2>
   <div id="flex-container">
     <span class="flex-item"></span>
     <div class="flex-item"></div>
     <span class="flex-item"></span>
   </div>
+  <h2>The CSS code for this page (check the file):</h2>
+    <pre>
+    <code>
+#flex-container {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid black;
+  height: 150px;
+  width: 600px;
+}
+
+.flex-item {
+  width: 500px;
+  height: 100px;
+  flex-shrink:0;
+
+  border-radius: 10px;
+  background-color: purple;
+  margin: 5px;
+}
+    </code>
+    </pre>
 </body>
 </html>

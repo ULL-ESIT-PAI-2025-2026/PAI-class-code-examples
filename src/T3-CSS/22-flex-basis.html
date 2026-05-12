@@ -15,17 +15,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>22 PAI: HTML & CSS</title>
+  <link rel=stylesheet href="csscode.css">
   <link rel=stylesheet href="flex-basis.css">
 </head>
 <body>
   <h1>Flex Basis</h1>
-  <p>
-  If we unset the height and width, our flex items disappear, because the flex basis is now the content size, which is empty:
-  </p>
+  <h2>If we unset the height and width, our flex items disappear, because the flex basis is now the content size, which is empty:</h2>
   <div id="flex-container">
     <span class="flex-item"></span>
     <div class="flex-item"></div>
     <span class="flex-item"></span>
   </div>
+
+  <h2>The CSS code for this page (check the file):</h2>
+    <pre>
+    <code>
+
+#flex-container {
+  display: flex;
+  border: 2px solid black;
+  height: 150px;
+}
+
+.flex-item {
+  border-radius: 10px;
+  background-color: purple;
+  margin: 5px;
+}
+    </code>
+    </pre>
 </body>
 </html>
